@@ -6,6 +6,84 @@
   <title>Document</title>
 </head>
 <body>
+  <h1>Homework</h1>
+
+  <div>
+    <h2>Завдання 1</h2>
+    <p>База даних зберігає в собі інформацію про користувачів у вигляді:</p>
+    <pre>
+      <code>
+        {
+          firstName: Ivan,
+          lastName: Vasylchenko,
+        }
+      </code>
+    </pre>
+    <p>
+      Приклад:
+      Буде зручно мати поле fullName у об'єкті. Створи функцію addFullName,
+      яка буде додавати поле fullName з рядком {{user.firstName}} {{user.lastName}}для user,
+      якого вона прийматиме. Повертати з функції нічого не потрібно.
+    </p>
+    <pre>
+      <code>
+        const user = { firstName: 'Ivan', lastName: 'Vasylchenko' };
+        addFullName(user);
+        // user === { firstName: 'Ivan', lastName: 'Vasylchenko', fullName: 'Ivan Vasylchenko' }
+      </code>
+    </pre>
+  </div>
+
+  <div>
+    <h2>Завдання 2</h2>
+    <p>
+      В базі даних користувачів стався збій. У деяких користувачів зникли значення з поля firstName,
+      добре що у user вже є поле fullName, з якого ми можемо взяти потрібні дані.
+      Давай повернено імена користувачам users у яких firstName рівне undefined за допомогою функції restoreNames.
+      Повертати з функції нічого не потрібно.
+
+      Приклад:
+    </p>
+    <pre>
+      <code>
+        const users = [
+          ...,
+          {
+            firstName: undefined,
+            lastName: 'Holy',
+            fullName: 'Jack Holy',
+          },
+          ...,
+        ];
+        restoreNames(users)
+        // users === [..., {firstName: 'Jack', lastName: 'Holy', fullName: 'Jack Holy'}, ...]
+      </code>
+    </pre>
+  </div>
+
+  <div>
+    <h2>Завдання 3</h2>
+    <p>
+      Вночі у головного інженера зі столу хтось потягнув схему,
+      за якою ми виготовляли наших роботів.
+      Тепер ми не знаємо, які дані потрібні для робота, щоб він працював коректно.
+      Пропоную зловити одного робота, що зараз прибирає у коридорі, підключитися до його терміналу і дізнатися,
+      які поля нам потрібні для нових роботів. Створи функцію getRobotSchema, яка приймає об'єкт robot і повертає набір ключів і типи значень,
+      які в них мають зберігатися. Результат має виглядати ось так: [[key, type], [key, type]...]
+
+      Приклад:
+    </p>
   
+    <pre>
+      <code>
+        const robot = {
+          version: 16,
+          name: 'Cleaner 3000',
+          coords: [345, 12],
+        };
+      
+        getRobotSchema(robot) === [['version', 'number'], ['name', 'string'], ['coords', 'object']]
+      </code>
+    </pre>
 </body>
 </html>
