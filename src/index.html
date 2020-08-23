@@ -6,9 +6,190 @@
   <title>Webpack starter</title>
 </head>
 <body>
-  <nav class="nav">
-    <a class="nav-link" href="task1.html">Task 1. Countries population</a>
-    <a class="nav-link" href="task2.html">Task 2. List of employees</a>
-  </nav>
+<div class="container">
+  <h1>Task 1: TOP 10 LARGEST COUNTRIES BY POPULATION</h1>
+  <div class="task">
+    <p>Посчитайте суммарную и среднюю популяцию всех стран. Результат занесите внутрь элемента с надписью Calculate it!</p>
+  </div>
+  <ol class="list">
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-china.gif" alt="China flag">
+        China:
+      </div>
+      <span class="population">1,439,234,240</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-india.gif" alt="India flag">
+        India:
+      </div>
+      <span class="population">1,379,784,212</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-usa.gif" alt="USA flag">
+        USA:
+      </div>
+      <span class="population">330,971,314</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-indonesia.gif" alt="Indonesia flag">
+        Indonesia:
+      </div>
+      <span class="population">273,476,730</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-pakistan.gif" alt="Pakistan flag">
+        Pakistan:
+      </div>
+      <span class="population">220,822,025</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-brazil.gif" alt="Brazil flag">
+        Brazil:
+      </div>
+      <span class="population">220,822,025</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-nigeria.gif" alt="Nigeria flag">
+        Nigeria:
+      </div>
+      <span class="population">220,822,025</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-bangladesh.gif" alt="Bangladesh flag">
+        Bangladesh:
+      </div>
+      <span class="population">164,662,809</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-russia.gif" alt="Russia flag">
+        Russia:
+      </div>
+      <span class="population">145,933,461</span>
+    </li>
+    <li class="list__item">
+      <div>
+        <img src="public/images/flag-mexico.gif" alt="Mexico flag">
+        Mexico:
+      </div>
+      <span class="population">128,910,799</span>
+    </li>
+  </ol>
+  <p class="total">Total: <span class="total-population">Calculate it!</span></p>
+  <p class="average">Average: <span class="average-population">Calculate it!</span></p>
+</div>
+<div class="container">
+  <h1>Task 2: List of employees</h1>
+  <div class="task">
+    <p>Заполнить доску почета. Найти самого оплачиваемого сотрудника и вывести его данные вместо знаков вопроса. Данные брать с дата атрибутов</p>
+  </div>
+  <ul>
+    <li
+        data-position="Accountant"
+        data-salary="$162,700"
+        data-age="33"
+    >
+      Airi Satou
+    </li>
+    <li
+        data-position="Javascript Developer"
+        data-salary="$183,000"
+        data-age="29"
+    >
+      Michael Bruce
+    </li>
+    <li
+        data-position="Marketing Designer"
+        data-salary="$198,000"
+        data-age="66"
+    >
+      Michael Silva
+    </li>
+    <li
+        data-position="Technical Author"
+        data-salary="$145,000"
+        data-age="27"
+    >
+      Prescott Bartlett
+    </li>
+    <li
+        data-position="Developer"
+        data-salary="$98,540"
+        data-age="61"
+    >
+      Thor Walton
+    </li>
+    <li
+        data-position="Integration Specialist"
+        data-salary="$327,900"
+        data-age="55"
+    >
+      Rhona Davidson
+    </li>
+    <li
+        data-position="Data Coordinator"
+        data-salary="$138,575"
+        data-age="64"
+    >
+      Serge Baldwin
+    </li>
+    <li
+        data-position="Regional Director"
+        data-salary="$183,000"
+        data-age="51"
+    >
+      Shad Decker
+    </li>
+    <li
+        data-position="Regional Marketing"
+        data-salary="$163,000"
+        data-age="20"
+    >
+      Shou Itou
+    </li>
+    <li
+        data-position="Financial Controller"
+        data-salary="$452,500"
+        data-age="62"
+    >
+      Vivian Harrell
+    </li>
+    <li
+        data-position="Javascript Developer"
+        data-salary="$205,500"
+        data-age="39"
+    >
+      Colleen Hurst
+    </li>
+  </ul>
+
+  <div class="honor-desk">
+    <h4>Самый оплачиваемый сотрудник</h4>
+    <div>
+      <span>Имя</span>
+      <span id="name">???</span>
+    </div>
+    <div>
+      <span>Зарплата</span>
+      <span id="salary">???</span>
+    </div>
+    <div>
+      <span>Возраст</span>
+      <span id="age">???</span>
+    </div>
+    <div>
+      <span>Позиция</span>
+      <span id="position">???</span>
+    </div>
+  </div>
+</div>
 </body>
 </html>
