@@ -47,17 +47,18 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'src/public'),
+    contentBase: path.resolve(__dirname, 'dist'),
     overlay: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src/public/index.html'),
+      template: path.join(__dirname, 'src/index.html'),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.join(__dirname, 'src/public'),
+          to: path.join(__dirname, 'dist/public'),
         },
       ],
     }),
