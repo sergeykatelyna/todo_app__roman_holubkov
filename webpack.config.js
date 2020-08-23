@@ -13,14 +13,31 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-        }
-      }
-    ]
+        use: [
+          'babel-loader',
+          'eslint-loader',
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+    ],
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    overlay: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
