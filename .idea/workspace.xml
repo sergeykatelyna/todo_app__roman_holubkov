@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/task1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/assets/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +80,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Job\hillel\Hillel-group\src" />
+      <recent name="D:\Job\hillel\Hillel-group\src\html" />
       <recent name="D:\Job\hillel\Hillel-group\src\app\assets" />
       <recent name="D:\Job\hillel\Hillel-group\src\app" />
       <recent name="D:\Job\hillel\Hillel-group\src\public" />

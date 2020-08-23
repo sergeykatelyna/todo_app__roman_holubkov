@@ -2,6 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+function generateHtmlPlugins(fileNames) {
+  return fileNames.map((filename) => new HtmlWebpackPlugin({
+    filename,
+    template: path.join(__dirname, `src/${filename}`),
+  }));
+}
+
 module.exports = {
   entry: './src/app/index.js',
   output: {
@@ -51,9 +58,7 @@ module.exports = {
     overlay: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src/index.html'),
-    }),
+    ...generateHtmlPlugins(['index.html', 'task1.html', 'task2.html']),
     new CopyWebpackPlugin({
       patterns: [
         {

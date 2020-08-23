@@ -1,22 +1,29 @@
-//@import "fonts";
+@import "fonts";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
 
 body {
-  display: flex;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   font-family: Roboto, sans-serif;
   counter-reset: section;
 }
 
 h1 {
-  width: 460px;
+  text-align: center;
 }
 
 .list {
-  margin: 32px 0;
+  margin: 16px 0 0 0;
   list-style: none;
   padding: 0;
   &__item {
@@ -43,10 +50,29 @@ h1 {
   }
 }
 
+.task {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
 .total,
-.average {
+.average, {
   font-size: 20px;
   &-population {
     font-size: 24px;
+  }
+}
+
+.nav {
+  max-width: 400px;
+  margin: 20px auto;
+  &-link {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
