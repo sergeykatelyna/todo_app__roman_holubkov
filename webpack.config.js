@@ -1,9 +1,9 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.bundle.js',
@@ -33,16 +33,33 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'src/public'),
     overlay: true,
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: path.join(__dirname, 'src/public/index.html'),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/public'),
+        },
+      ],
     }),
   ],
 };
