@@ -6,9 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/assets/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-bangladesh.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-brazil.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-china.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-india.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-indonesia.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-mexico.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-nigeria.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-pakistan.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-russia.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/flag-usa.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/preview.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
