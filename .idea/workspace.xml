@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4ed3ffd3-c736-4874-91b4-509433ab88f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/assets/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="todo_app" />
+                    <option name="lastUsedInstant" value="1599067055" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="DOM_basics" />
                     <option name="lastUsedInstant" value="1598940081" />
                   </RecentBranch>
@@ -43,10 +46,6 @@
                   <RecentBranch>
                     <option name="branchName" value="alex_kyrychenko" />
                     <option name="lastUsedInstant" value="1597827228" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="dmytro_karachan" />
-                    <option name="lastUsedInstant" value="1597826654" />
                   </RecentBranch>
                 </list>
               </option>
