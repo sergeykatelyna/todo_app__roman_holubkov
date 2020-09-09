@@ -72,46 +72,66 @@ const users = [
 const tBody = document.getElementsByTagName('tbody')[0];
 const input = document.querySelector('input.form-control');
 
-function showValue(value) {
+function getValueToShow(value) {
   return value || 'Value is missing!';
+}
+
+function createTdTag(val) {
+  return `<td>${getValueToShow(val)}</td>`;
+}
+
+function createTrTag(user, counter) {
+  const {
+    active,
+    contact,
+    createdAt,
+    name,
+  } = user;
+  const number = contact?.phoneNumber || 'no phone number';
+  const activeStr = active ? 'active' : 'inactive';
+  const newTr = document.createElement('TR');
+
+  newTr.append(
+    createTdTag(counter),
+    createTdTag(name),
+    createTdTag(number),
+    createTdTag(activeStr),
+    createTdTag(createdAt),
+  );
+
+  return newTr;
 }
 
 function showUsers(usersToShow) {
   let counter = 0;
 
   usersToShow.forEach((user) => {
-    const {
-      active,
-      contact,
-      createdAt,
-      name,
-    } = user;
-    const number = contact?.phoneNumber || 'no phone number';
+    const newTr = createTrTag(user, counter);
 
-    const newTr = document.createElement('TR');
-    newTr.insertAdjacentHTML('afterbegin', `
-      <td>${counter += 1}</td>
-      <td>${showValue(name)}</td>
-      <td>${showValue(number)}</td>
-      <td>${(active) ? 'active' : 'inactive'}</td>
-      <td>${showValue(createdAt)}</td>
-    `);
     tBody.append(newTr);
+
+    counter += 1;
   });
+}
+
+function getStrPartsArr(str) {
+  return str.toLowerCase().trim().split(' ');
 }
 
 // Функция filterUsers выбирает всех пользователей
 // у которых хотя бы часть имени совпадает с инпутом.
 function filterUsers(usersToFilter, entry) {
   const filteredUsers = usersToFilter.filter((user) => {
-    const entryParts = entry.toLowerCase().trim().split(' ');
-    const nameParts = user.name.toLowerCase().trim().split(' ');
+    const entryParts = getStrPartsArr(entry);
+    const nameParts = getStrPartsArr(user.name);
 
-    const DoesSomeEntryMatch = entryParts.every((entryPart) => {
-      const DoesSomeEntryPartMatch = nameParts.some((namePart) => namePart.startsWith(entryPart));
-      return DoesSomeEntryPartMatch;
+    const isSomeEntryMatch = entryParts.every((entryPart) => {
+      const isSomeEntryPartMatch = nameParts.some((namePart) =>
+        namePart.startsWith(entryPart)
+      );
+      return isSomeEntryPartMatch;
     });
-    return DoesSomeEntryMatch;
+    return isSomeEntryMatch;
   });
   return filteredUsers;
 }
@@ -120,6 +140,10 @@ showUsers(users);
 
 input.addEventListener('input', (e) => {
   const entry = e.target.value;
+  if (!entry) {
+    return;
+  }
+
   const filteredUsers = filterUsers(users, entry);
 
   tBody.innerHTML = '';
