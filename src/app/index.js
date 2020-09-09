@@ -1,4 +1,6 @@
 import './assets/styles/main.scss';
+import showUsers from './showUsers';
+import filterUsers from './filterUsers';
 
 const users = [
   {
@@ -72,80 +74,17 @@ const users = [
 const tBody = document.getElementsByTagName('tbody')[0];
 const input = document.querySelector('input.form-control');
 
-function getValueToShow(value) {
-  return value || 'Value is missing!';
-}
-
-function createTdTag(val) {
-  return `<td>${getValueToShow(val)}</td>`;
-}
-
-function createTrTag(user, counter) {
-  const {
-    active,
-    contact,
-    createdAt,
-    name,
-  } = user;
-  const number = contact?.phoneNumber || 'no phone number';
-  const activeStr = active ? 'active' : 'inactive';
-  const newTr = document.createElement('TR');
-
-  newTr.append(
-    createTdTag(counter),
-    createTdTag(name),
-    createTdTag(number),
-    createTdTag(activeStr),
-    createTdTag(createdAt),
-  );
-
-  return newTr;
-}
-
-function showUsers(usersToShow) {
-  let counter = 0;
-
-  usersToShow.forEach((user) => {
-    const newTr = createTrTag(user, counter);
-
-    tBody.append(newTr);
-
-    counter += 1;
-  });
-}
-
-function getStrPartsArr(str) {
-  return str.toLowerCase().trim().split(' ');
-}
-
-// Функция filterUsers выбирает всех пользователей
-// у которых хотя бы часть имени совпадает с инпутом.
-function filterUsers(usersToFilter, entry) {
-  const filteredUsers = usersToFilter.filter((user) => {
-    const entryParts = getStrPartsArr(entry);
-    const nameParts = getStrPartsArr(user.name);
-
-    const isSomeEntryMatch = entryParts.every((entryPart) => {
-      const isSomeEntryPartMatch = nameParts.some((namePart) =>
-        namePart.startsWith(entryPart)
-      );
-      return isSomeEntryPartMatch;
-    });
-    return isSomeEntryMatch;
-  });
-  return filteredUsers;
-}
-
-showUsers(users);
+showUsers(users, tBody);
 
 input.addEventListener('input', (e) => {
   const entry = e.target.value;
-  if (!entry) {
-    return;
+
+  if (!entry.trim()) {
+    showUsers(users, tBody);
   }
 
   const filteredUsers = filterUsers(users, entry);
 
   tBody.innerHTML = '';
-  showUsers(filteredUsers);
+  showUsers(filteredUsers, tBody);
 });
